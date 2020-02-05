@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dp_16"
+    tools:context=".ui.MainActivity">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_length"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_length"
+        android:inputType="number"
+        android:maxLength="8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_width"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:hint="@string/hint_width"
+        android:inputType="number"
+        android:maxLength="8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_length" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:hint="@string/hint_height"
+        android:inputType="number"
+        android:maxLength="8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_width" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:background="@color/colorAccent"
+        android:text="@string/action_save"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintTop_toBottomOf="@id/edt_height" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/view_calculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_height">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_calculate_volume"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginEnd="@dimen/dp_3"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/action_calculate_volume"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_calculate_circumference"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_3"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginEnd="@dimen/dp_3"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="@string/action_calculate_circumference"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_calculate_surface_area"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_3"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:text="@string/action_calculate_surface_area"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_result"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_height" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

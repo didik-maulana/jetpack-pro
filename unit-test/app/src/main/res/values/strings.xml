@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Unit Test</string>
+    <string name="hint_length">Length</string>
+    <string name="hint_width">Width</string>
+    <string name="hint_height">Height</string>
+    <string name="action_save">Save</string>
+    <string name="action_calculate_circumference">Circumference</string>
+    <string name="action_calculate_volume">Volume</string>
+    <string name="action_calculate_surface_area">Surface Area</string>
+    <string name="title_result">Result</string>
+    <string name="msg_error_not_empty">Field must not be empty</string>
+</resources>
