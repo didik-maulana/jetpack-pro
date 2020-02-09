@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">View Model</string>
+    <string name="hint_length">Length</string>
+    <string name="hint_width">Width</string>
+    <string name="hint_height">Height</string>
+    <string name="action_calculate">Calculate</string>
+    <string name="title_result">Result</string>
+    <string name="msg_error_empty_input">Input must not be empty</string>
+</resources>
