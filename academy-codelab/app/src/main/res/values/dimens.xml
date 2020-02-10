@@ -14,4 +14,5 @@
     <dimen name="dp_120">120dp</dimen>
     <dimen name="dp_2">2dp</dimen>
     <dimen name="sp_14">14sp</dimen>
+    <dimen name="dp_35">35dp</dimen>
 </resources>

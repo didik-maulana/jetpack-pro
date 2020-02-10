@@ -54,28 +54,27 @@
 
     <Button
         android:id="@+id/btn_start"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_35"
         android:layout_marginStart="@dimen/dp_8"
         android:layout_marginTop="@dimen/dp_8"
         android:layout_marginEnd="@dimen/dp_8"
         android:background="@drawable/bg_button_pressed_selector"
+        android:paddingStart="@dimen/dp_4"
+        android:paddingEnd="@dimen/dp_4"
         android:text="@string/start_learn"
         android:textColor="@android:color/background_light"
         android:textSize="@dimen/sp_12"
-        app:layout_constraintBottom_toBottomOf="@+id/img_poster"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/tv_date"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_poster" />
 
     <TextView
         android:id="@+id/tv_label_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_8"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/dp_16"
         android:layout_marginEnd="@dimen/dp_8"
         android:text="@string/description_module"
         android:textColor="@color/colorText"
@@ -84,15 +83,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_poster" />
-
+        app:layout_constraintTop_toBottomOf="@+id/btn_start" />
 
     <View
         android:id="@+id/view_line_description"
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
         android:layout_marginStart="@dimen/dp_8"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="@dimen/dp_4"
         android:layout_marginEnd="@dimen/dp_8"
         android:background="@color/colorBlack"
         app:layout_constraintTop_toBottomOf="@+id/tv_label_description" />
@@ -133,7 +131,7 @@
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
         android:layout_marginStart="@dimen/dp_8"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="@dimen/dp_4"
         android:layout_marginEnd="@dimen/dp_8"
         android:background="#000000"
         app:layout_constraintTop_toBottomOf="@+id/tv_list_module" />
@@ -142,9 +140,11 @@
         android:id="@+id/rv_module"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="@dimen/dp_4"
         android:layout_marginTop="@dimen/dp_8"
-        android:layout_marginEnd="4dp"
+        android:layout_marginEnd="@dimen/dp_4"
+        android:nestedScrollingEnabled="false"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/view_line_module"

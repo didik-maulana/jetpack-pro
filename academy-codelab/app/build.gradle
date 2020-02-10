@@ -31,8 +31,8 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     // kotlin
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
+    implementation "androidx.core:core-ktx:$coreVersion"
 
     // ui
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -40,16 +40,18 @@ dependencies {
     implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
     implementation "com.google.android.material:material:$materialVersion"
     implementation "androidx.recyclerview:recyclerview:$recyclerViewVersion"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     // glide
     implementation "com.github.bumptech.glide:glide:$glideVersion"
 
+    //architecture component
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$archLifecycleVersion"
+
     // testing
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation 'com.google.android.material:material:1.0.0'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    testImplementation "junit:junit:$junitVersion"
-    androidTestImplementation "junit:junit:$junitVersion"
+    testImplementation "androidx.test.ext:junit:$junitVersion"
+    androidTestImplementation "androidx.test.ext:junit:$junitVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$espressoVersion"
+    androidTestImplementation "androidx.test:rules:$androidXTestVersion"
 }

@@ -14,16 +14,16 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name=".ui.detail.DetailCourseActivity"
+            android:name="com.codingtive.academycodelab.ui.pages.detail.DetailCourseActivity"
             android:label="@string/title_activity_detail_course"
-            android:parentActivityName=".ui.home.HomeActivity"
+            android:parentActivityName="com.codingtive.academycodelab.ui.pages.home.HomeActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.codingtive.academycodelab.ui.home.HomeActivity" />
+                android:value="com.codingtive.academycodelab.ui.pages.home.HomeActivity" />
         </activity>
-        <activity android:name=".ui.reader.CourseReaderActivity" />
-        <activity android:name=".ui.home.HomeActivity">
+        <activity android:name="com.codingtive.academycodelab.ui.pages.reader.CourseReaderActivity" />
+        <activity android:name="com.codingtive.academycodelab.ui.pages.home.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -3,7 +3,7 @@ package com.codingtive.academycodelab.core.utils
 import com.codingtive.academycodelab.core.entities.CourseEntity
 import com.codingtive.academycodelab.core.entities.ModuleEntity
 
-object DataDummy {
+object DummyData {
 
     fun generateDummyCourses(): List<CourseEntity> {
 
